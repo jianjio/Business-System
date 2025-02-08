@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 const OrderForm = () => {
   const [formData, setFormData] = useState({
-    date: "Tuesday, June 4, 2024",
-    client: "Leonardo Paulino",
-    designer: "Voltaire Villareal",
-    address: "Gate Celebrity Place Diliman",
-    contactPerson: "Leonardo Paulino",
-    receiverNo: "0916-497-5199",
-    orderNo: "3411",
+    date: "",
+    client: "",
+    designer: "",
+    address: "",
+    contactPerson: "",
+    receiverNo: "",
+    orderNo: "",
+    additionalField1: "",
+    additionalField2: ""
   });
 
   const [rows, setRows] = useState([
@@ -66,12 +68,13 @@ const OrderForm = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
-      <div className="max-w-6xl table-auto p-6 bg-white shadow-lg rounded-lg">
+      <div className="w-full table-auto p-6 bg-white shadow-lg rounded-lg">
         <h2 className="text-xl font-bold mb-4 text-center">Order Details</h2>
-        <div className="grid grid-cols-2 gap-12 border-b pb-4">
+        <div className="grid grid-cols-3 gap-12 border-b pb-4">
           <div className="grid grid-cols-2 gap-6">
             <label className="font-semibold">Date:</label>
-            <textarea
+            <input
+              type="date"
               name="date"
               value={formData.date}
               onChange={handleChange}
@@ -79,7 +82,8 @@ const OrderForm = () => {
             />
 
             <label className="font-semibold">Client:</label>
-            <textarea
+            <input
+              type="text"
               name="client"
               value={formData.client}
               onChange={handleChange}
@@ -87,7 +91,8 @@ const OrderForm = () => {
             />
 
             <label className="font-semibold">Designer:</label>
-            <textarea
+            <input
+              type="text"
               name="designer"
               value={formData.designer}
               onChange={handleChange}
@@ -104,7 +109,8 @@ const OrderForm = () => {
           </div>
           <div className="grid grid-cols-2 gap-6">
             <label className="font-semibold">Contact Person:</label>
-            <textarea
+            <input
+              type="text"
               name="contactPerson"
               value={formData.contactPerson}
               onChange={handleChange}
@@ -112,7 +118,8 @@ const OrderForm = () => {
             />
 
             <label className="font-semibold">Receiver's No:</label>
-            <textarea
+            <input
+              type="text"
               name="receiverNo"
               value={formData.receiverNo}
               onChange={handleChange}
@@ -120,13 +127,72 @@ const OrderForm = () => {
             />
 
             <label className="font-semibold">Order No:</label>
-            <textarea
+            <input
+              type="text"
               name="orderNo"
               value={formData.orderNo}
               onChange={handleChange}
               className="border p-2 rounded w-full font-bold"
             />
           </div>
+          <div className="w-full table-auto p-6 bg-white shadow-lg rounded-lg">
+        <h2 className="text-xl font-bold mb-4 text-center">Amount</h2>
+          <div className="grid grid-cols-2 gap-6">
+            <label className="font-semibold">SubTotal:</label>
+            <input
+              type="text"
+              name="additionalField1"
+              value={formData.additionalField1}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Discount %:</label>
+            <input
+              type="text"
+              name="additionalField2"
+              value={formData.additionalField2}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Discount Total:</label>
+            <input
+              type="text"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Taxable Total:</label>
+            <input
+              type="text"
+              name="client"
+              value={formData.client}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Tax Total:</label>
+            <input
+              type="text"
+              name="designer"
+              value={formData.designer}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Net Total:</label>
+            <input
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+          </div>
+          </div>
+          
         </div>
       </div>
 
