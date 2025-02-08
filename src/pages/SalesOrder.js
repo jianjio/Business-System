@@ -47,7 +47,7 @@ export default function SalesOrder() {
             <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md mr-2">
               Save
             </button>
-            <button className="bg-red-500 text-white px-4 py-2 rounded-md">
+            <button className="bg-red-500 hover:bg-red-800 text-white px-4 py-2 rounded-md">
               Discard
             </button>
           </div>
@@ -152,7 +152,7 @@ export default function SalesOrder() {
                 Display Order
               </button>
             </div>
-            <table className=" w-full border-collapse border border-gray-200">
+            <table className=" w-full border-collapse border border-gray-300">
               <thead>
                 <tr className="bg-gray-100">
                   <th className="border p-2">Item Code</th>
@@ -211,7 +211,7 @@ export default function SalesOrder() {
 
             {/* Tab Content */}
             {activeTab === "Content" && (
-              <div className="w-full table-auto p-6 bg-gray-200 shadow-lg rounded-lg mt-4">
+              <div className="w-full table-auto p-6 bg-gray-200 border shadow-lg rounded-lg mt-4">
                 
                 <div className="flex gap-2 mb-4">
                   <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md">
