@@ -141,27 +141,27 @@ const OrderForm = () => {
             <label className="font-semibold">SubTotal:</label>
             <input
               type="text"
-              name="additionalField1"
-              value={formData.additionalField1}
-              onChange={handleChange}
+              name=""
+              // value={formData.additionalField1}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
 
             <label className="font-semibold">Discount %:</label>
             <input
               type="text"
-              name="additionalField2"
-              value={formData.additionalField2}
-              onChange={handleChange}
+              name=""
+              // value={formData.additionalField2}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
 
             <label className="font-semibold">Discount Total:</label>
             <input
               type="text"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
+              name=""
+              // value={formData.date}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
 
@@ -169,25 +169,25 @@ const OrderForm = () => {
             <input
               type="text"
               name="client"
-              value={formData.client}
-              onChange={handleChange}
+              // value={formData.client}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
 
             <label className="font-semibold">Tax Total:</label>
             <input
               type="text"
-              name="designer"
-              value={formData.designer}
-              onChange={handleChange}
+              name=""
+              // value={formData.designer}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
 
             <label className="font-semibold">Net Total:</label>
             <input
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
+              name=""
+              // value={formData.address}
+              // onChange={handleChange}
               className="border p-2 rounded w-full"
             />
           </div>

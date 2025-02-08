@@ -45,7 +45,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="w-64 bg-gray-200 p-4 h-full">
+    <div className="min-w-64 bg-gray-200 p-4 h-dvh">
       <h3 className="text-lg font-bold mb-4">Menu</h3>
       <ul className="space-y-2 font-semibold">
         <li>
