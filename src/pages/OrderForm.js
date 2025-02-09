@@ -70,113 +70,129 @@ const OrderForm = () => {
     <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
       <div className="bg-white w-full shadow-md rounded-lg p-6">
       <h2 className="text-xl font-semibold mb-4 uppercase">Order Details</h2>
-      <div className="grid grid-cols-3 gap-8">
-      <div className="">
-            <div className="grid grid-cols-2 gap-3">
-              <label className="font-semibold">Date:</label>
+      <div className="grid grid-cols-3 gap-6">
+        <div>
+            <div className="grid grid-cols-1">
+              <label className="font-medium ml-2">Date:</label>
               <input
                 type="date"
-                name="date"
-                className="border p-2 w-full rounded-md"
+                name=""
+                placeholder=""
+                className="border p-2 w-2/3 rounded-md shadow-lg"
+                required
+                
               />
 
-              <label className="font-semibold">Client:</label>
+              <label className="font-medium ml-2 mt-4">Client:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Designer:</label>
+              <label className="font-medium ml-2 mt-4">Designer:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Address:</label>
+              <label className="font-medium ml-2 mt-4">Address:</label>
               <textarea
                 type="text"
-                name="client"
-                className="border p-2 rounded w-full"
-              />
-
-            </div>
-          </div>
-          <div className="">
-            
-            <div className="grid grid-cols-2 gap-3">
-              <label className="font-semibold">Contact Person:</label>
-              <input
-                type="text"
-                name="contact person"
-                className="border p-2 w-full rounded-md"
-              />
-
-              <label className="font-semibold">Receiver's Number:</label>
-              <input
-                type="text"
                 name=""
-                className="border p-2 rounded w-full"
-              />
-
-              <label className="font-semibold">Order Number:</label>
-              <input
-                type="text"
-                name=""
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-2/3 shadow-lg"
               />
 
               
             </div>
           </div>
-          <div className="">
-            <h3 className="font-bold mb-6 uppercase border-b">Amount</h3>
-            <div className="grid grid-cols-2 gap-3">
-              <label className="font-semibold">SubTotal:</label>
+          <div>
+            <div className="grid grid-cols-1 ml-5">
+              <label className="font-medium ml-2">Contact Person:</label>
+              <input
+                type="text"
+                name=""
+                placeholder=""
+                className="border p-2 w-2/3 rounded-md shadow-lg"
+                
+                
+              />
+
+              <label className="font-medium ml-2 mt-4">Receiver's No.:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-2/3 shadow-lg"
+              />
+
+              <label className="font-medium ml-2 mt-4">Order No.:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-2/3 shadow-lg"
+              />
+
+              
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold mb-4 ">Amount</h3>
+            <div className="grid grid-cols-2 gap-5">
+              <label className="font-medium">SubTotal:</label>
               <input
                 type="text"
                 name="subTotal"
-                placeholder="Subtotal"
-                className="border p-2 w-full rounded-md"
-                disabled
-                value={formData.subTotal}
+                placeholder=""
+                className="border p-1 w-2/3 rounded-md shadow-lg"
+                
+                
               />
 
-              <label className="font-semibold">Discount %:</label>
+              <label className="font-medium">Discount %:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Discount Total:</label>
+              <label className="font-medium">Discount Total:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Taxable Total:</label>
+              <label className="font-medium">Taxable Total:</label>
               <input
                 type="text"
                 name="client"
-                className="border p-2 rounded w-full"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Tax Total:</label>
+              <label className="font-medium">Tax Total:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Net Total:</label>
+              <label className="font-medium">Net Total:</label>
               <input
                 name=""
-                className="border p-2 rounded w-full"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
+              <label className="font-medium">Remaining Credit Limit:</label>
+              <input
+                type="text"
+                name="discount"
+                placeholder=""
+                className="border p-2 w-2/3 mb-2 rounded-md shadow-lg"
+                
+              
+              />
             </div>
           </div>
         </div>
@@ -216,7 +232,7 @@ const OrderForm = () => {
                         onChange={(e) => handleRowChange(index, e)}
                         className="border p-1 rounded w-full"
                       >
-                        <option value=""></option>
+                        <option value="">None</option>
                         <option value="Type 1">For Production</option>
                         <option value="Type 2">Stock</option>
                       </select>

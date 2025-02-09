@@ -27,9 +27,9 @@ function BusinessPartnerPage({ authToken }) {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 p-6 bg-gray-100 rounded-lg shadow-md">
+    <div className="grid grid-cols-3 gap-4 p-6 bg-gray-200 rounded-lg shadow-md">
       {/* Left Side: Form */}
-      <div className="col-span-1 bg-white p-4 rounded-md shadow-sm">
+      <div className="col-span-1 bg-gray-200 p-4 rounded-md">
         <div className="flex justify-between mb-4">
           <button
             onClick={handleAdd}
@@ -70,7 +70,7 @@ function BusinessPartnerPage({ authToken }) {
       </div>
 
       {/* Right Side: List */}
-      <div className="col-span-2 bg-white p-4 rounded-md shadow-sm">
+      <div className="col-span-2 p-4 rounded-md shadow-sm">
         <h2 className="text-xl font-bold mb-4">Business Partners</h2>
         <BusinessPartnerList
           authToken={authToken}

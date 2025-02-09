@@ -41,8 +41,8 @@ export default function SalesOrder() {
   return (
     <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
       <div className="bg-white shadow-md rounded-lg p-6">
-        <div className="flex justify-between mb-4 ml-10">
-          <h2 className="text-xl font-semibold">Sales Order - Create</h2>
+        <div className="flex justify-between mb-4">
+          <h2 className="text-xl font-semibold uppercase">Sales Order - Create</h2>
           <div>
             <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md mr-2">
               Save
@@ -52,123 +52,179 @@ export default function SalesOrder() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6 ml-10">
-          <div>
-            <h3 className="font-semibold mb-4">General Information</h3>
-            <input
-              type="text"
-              name="customerID"
-              placeholder="Customer ID"
-              className="border p-2 w-64 mb-4 rounded-md"
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="customerName"
-              placeholder="Customer Name"
-              className="border p-2 w-64  mb-4 rounded-md"
-              onChange={handleChange}
-            />
-            <input
-              type="date"
-              name="postingDate"
-              className="border p-2 w-64  mb-4 rounded-md"
-              value={formData.postingDate}
-              onChange={handleChange}
-            />
-            <input
-              type="date"
-              name="documentDate"
-              className="border p-2 w-64  mb-4 rounded-md"
-              value={formData.documentDate}
-              onChange={handleChange}
-            />
-            <input
-              type="date"
-              name="deliveryDate"
-              className="border p-2 w-64  mb-4 rounded-md"
-              onChange={handleChange}
-            />
-            <select
+            <h3 className="font-semibold mb-4 ">General Information</h3>
+        <div className="grid grid-cols-4 gap-6">
+        <div>
+            <div className="grid grid-cols-1">
+              <label className="font-medium ml-2">Customer ID:</label>
+              <input
+                type="text"
+                name=""
+                placeholder=""
+                className="border p-2 w-full rounded-md"
+                required
+                
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Customer Name:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Posting Date:</label>
+              <input
+                type="date"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Document Date:</label>
+              <input
+                type="date"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Delivery Date:</label>
+              <input
+                type="date"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">DocStatus:</label>
+              <select
               name="docStatus"
-              className="border p-2 w-64  mb-4 rounded-md"
+              className="border p-2 w-full mb-4 rounded-md"
               onChange={handleChange}
             >
               <option value="Open">Open</option>
               <option value="Closed">Closed</option>
             </select>
+            </div>
+          </div>
+          <div>
+            <div className="grid grid-cols-1 ml-5">
+              <label className="font-medium ml-2">Currency:</label>
+              <input
+                type="text"
+                name=""
+                placeholder=""
+                className="border p-2 w-full rounded-md"
+                
+                
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Salesperson:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Owner:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Customer Reference:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">Header Note:</label>
+              <textarea
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-medium ml-2 mt-4 border-t-4">BP Notes:</label>
+              <textarea
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+            </div>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Terms and Conditions</h3>
+            <label className="font-medium ml-2">Terms of Payment:</label>
             <input
               type="text"
               name="termsOfPayment"
-              placeholder="Terms of Payment"
-              className="border p-2 w-64  mb-4 rounded-md"
+              placeholder=""
+              className="border p-2 w-full mb-4 rounded-md shadow-lg"
               onChange={handleChange}
             />
           </div>
-          <div className="ml-10">
+          <div>
             <h3 className="font-semibold mb-4 ">Amount</h3>
-            <div className="grid grid-cols-2 gap-3">
-              <label className="font-semibold">SubTotal:</label>
+            <div className="grid grid-cols-2 gap-5">
+              <label className="font-medium">SubTotal:</label>
               <input
                 type="text"
                 name="subTotal"
-                placeholder="Subtotal"
-                className="border p-2 w-64 mb-2 rounded-md"
-                disabled
-                value={formData.subTotal}
+                placeholder=""
+                className="border p-1 w-2/3 rounded-md shadow-lg"
+                
+                
               />
 
-              <label className="font-semibold">Discount %:</label>
+              <label className="font-medium">Discount %:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-64"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Discount Total:</label>
+              <label className="font-medium">Discount Total:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-64"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Taxable Total:</label>
+              <label className="font-medium">Taxable Total:</label>
               <input
                 type="text"
                 name="client"
-                className="border p-2 rounded w-64"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Tax Total:</label>
+              <label className="font-medium">Tax Total:</label>
               <input
                 type="text"
                 name=""
-                className="border p-2 rounded w-64"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Net Total:</label>
+              <label className="font-medium">Net Total:</label>
               <input
                 name=""
-                className="border p-2 rounded w-64"
+                className="border p-1 rounded w-2/3 shadow-lg"
               />
 
-              <label className="font-semibold">Remaining Credit Limit:</label>
+              <label className="font-medium">Remaining Credit Limit:</label>
               <input
                 type="text"
                 name="discount"
-                placeholder="Discount %"
-                className="border p-2 w-64 mb-2 rounded-md"
-                disabled
-                value={formData.discount}
+                placeholder=""
+                className="border p-2 w-2/3 mb-2 rounded-md shadow-lg"
+                
+              
               />
             </div>
           </div>
         </div>
         <div className="mt-6 w-full table-auto p-6 bg-gray-200 shadow-lg rounded-lg">
-          <h3 className="font-semibold mb-4 ml-5">Add Items</h3>
+          <h3 className="font-semibold mb-4">Add Items</h3>
           <div className="border p-4 rounded-lg bg-gray-100">
             <div className="flex gap-2 mb-4">
               <input
@@ -177,13 +233,13 @@ export default function SalesOrder() {
                 className="border p-2 flex w-1/3 rounded-md"
               />
               <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md">
-                Add to PO
+                Add to SO
               </button>
               <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md">
                 Display Order
               </button>
             </div>
-            <table className=" w-full border-collapse border border-gray-300 text-xs">
+            <table className=" w-full border-collapse border border-gray-300 text-sm">
               <thead>
                 <tr className="bg-gray-100">
                   <th className="border p-2">Item Code</th>
@@ -208,11 +264,11 @@ export default function SalesOrder() {
                   <td className="border p-2">0.0000</td>
                   <td className="border p-2">129.0000</td>
                   <td className="border p-2">
-                    <input type="text" className="w-full p-1 border" />
+                    
                   </td>
                   <td className="border p-2">13.13</td>
                   <td className="border p-2">
-                    <input type="text" className="w-full p-1 border" />
+                    
                   </td>
                   <td className="border p-2">more</td>
                   <td className="border p-2">more</td>
@@ -254,7 +310,7 @@ export default function SalesOrder() {
                     Import
                   </button>
                 </div>
-                <table className="w-full border-collapse border border-gray-200 text-xs">
+                <table className="w-full border-collapse border border-gray-200 text-sm">
                   <thead>
                     <tr className="bg-gray-100">
                       {[
