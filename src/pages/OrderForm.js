@@ -230,9 +230,9 @@ const OrderForm = () => {
                         name={key}
                         value={row[key]}
                         onChange={(e) => handleRowChange(index, e)}
-                        className="border p-1 rounded w-full"
+                        className=" p-1 rounded w-full"
                       >
-                        <option value="">None</option>
+                        <option value=""></option>
                         <option value="Type 1">For Production</option>
                         <option value="Type 2">Stock</option>
                       </select>
@@ -242,7 +242,7 @@ const OrderForm = () => {
                         name={key}
                         value={row[key]}
                         onChange={(e) => handleRowChange(index, e)}
-                        className="border p-1 rounded w-full"
+                        className=" p-1 rounded w-full"
                       />
                     )}
                   </td>
