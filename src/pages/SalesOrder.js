@@ -39,9 +39,9 @@ export default function SalesOrder() {
   const [activeTab, setActiveTab] = useState("Content");
 
   return (
-    <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
+    <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto ">
       <div className="bg-white shadow-md rounded-lg p-6">
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between mb-4 ml-10">
           <h2 className="text-xl font-semibold">Sales Order - Create</h2>
           <div>
             <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md mr-2">
@@ -52,46 +52,46 @@ export default function SalesOrder() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-4 gap-6 ml-10">
           <div>
-            <h3 className="font-semibold mb-2">General Information</h3>
+            <h3 className="font-semibold mb-4">General Information</h3>
             <input
               type="text"
               name="customerID"
               placeholder="Customer ID"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64 mb-4 rounded-md"
               onChange={handleChange}
             />
             <input
               type="text"
               name="customerName"
               placeholder="Customer Name"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               onChange={handleChange}
             />
             <input
               type="date"
               name="postingDate"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               value={formData.postingDate}
               onChange={handleChange}
             />
             <input
               type="date"
               name="documentDate"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               value={formData.documentDate}
               onChange={handleChange}
             />
             <input
               type="date"
               name="deliveryDate"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               onChange={handleChange}
             />
             <select
               name="docStatus"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               onChange={handleChange}
             >
               <option value="Open">Open</option>
@@ -99,45 +99,86 @@ export default function SalesOrder() {
             </select>
           </div>
           <div>
-            <h3 className="font-semibold mb-2">Terms and Conditions</h3>
+            <h3 className="font-semibold mb-4">Terms and Conditions</h3>
             <input
               type="text"
               name="termsOfPayment"
               placeholder="Terms of Payment"
-              className="border p-2 w-full mb-2 rounded-md"
+              className="border p-2 w-64  mb-4 rounded-md"
               onChange={handleChange}
             />
           </div>
-          <div>
-            <h3 className="font-semibold mb-2">Amount</h3>
-            <input
-              type="text"
-              name="subTotal"
-              placeholder="Subtotal"
-              className="border p-2 w-full mb-2 rounded-md"
-              disabled
-              value={formData.subTotal}
-            />
-            <input
-              type="text"
-              name="discount"
-              placeholder="Discount %"
-              className="border p-2 w-full mb-2 rounded-md"
-              disabled
-              value={formData.discount}
-            />
-            <input
-              type="text"
-              name="netTotal"
-              placeholder="Net Total"
-              className="border p-2 w-full mb-2 rounded-md"
-              disabled
-              value={formData.netTotal}
-            />
+          <div className="ml-10">
+            <h3 className="font-semibold mb-4 ">Amount</h3>
+            <div className="grid grid-cols-2 gap-3">
+              <label className="font-semibold">SubTotal:</label>
+              <input
+                type="text"
+                name="subTotal"
+                placeholder="Subtotal"
+                className="border p-2 w-64 mb-2 rounded-md"
+                disabled
+                value={formData.subTotal}
+              />
+
+              <label className="font-semibold">Discount %:</label>
+              <input
+                type="text"
+                name=""
+                // value={formData.additionalField2}
+                // onChange={handleChange}
+                className="border p-2 rounded w-64"
+              />
+
+              <label className="font-semibold">Discount Total:</label>
+              <input
+                type="text"
+                name=""
+                // value={formData.date}
+                // onChange={handleChange}
+                className="border p-2 rounded w-64"
+              />
+
+              <label className="font-semibold">Taxable Total:</label>
+              <input
+                type="text"
+                name="client"
+                // value={formData.client}
+                // onChange={handleChange}
+                className="border p-2 rounded w-64"
+              />
+
+              <label className="font-semibold">Tax Total:</label>
+              <input
+                type="text"
+                name=""
+                // value={formData.designer}
+                // onChange={handleChange}
+                className="border p-2 rounded w-64"
+              />
+
+              <label className="font-semibold">Net Total:</label>
+              <input
+                name=""
+                // value={formData.address}
+                // onChange={handleChange}
+                className="border p-2 rounded w-64"
+              />
+
+              <label className="font-semibold">Remaining Credit Limit:</label>
+              <input
+                type="text"
+                name="discount"
+                placeholder="Discount %"
+                className="border p-2 w-64 mb-2 rounded-md"
+                disabled
+                value={formData.discount}
+              />
+            </div>
           </div>
         </div>
         <div className="mt-6 w-full table-auto p-6 bg-gray-200 shadow-lg rounded-lg">
-          <h3 className="font-semibold mb-2">Add Items</h3>
+          <h3 className="font-semibold mb-4 ml-5">Add Items</h3>
           <div className="border p-4 rounded-lg bg-gray-100">
             <div className="flex gap-2 mb-4">
               <input
@@ -164,7 +205,7 @@ export default function SalesOrder() {
                   <th className="border p-2">Unit Price</th>
                   <th className="border p-2">Qty</th>
                   <th className="border p-2">Last Sold Price</th>
-                  <th className="border p-2">Last Purch Price</th>
+                  <th className="border p-2">Last Purchase Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -191,7 +232,7 @@ export default function SalesOrder() {
           </div>
         </div>
         <div className="mt-6">
-          <div className="mt-6">
+          <div className="mt-6 mb-10">
             {/* Tab Navigation */}
             <div className="flex border-b">
               {tabs.map((tab) => (
@@ -212,7 +253,6 @@ export default function SalesOrder() {
             {/* Tab Content */}
             {activeTab === "Content" && (
               <div className="w-full table-auto p-6 bg-gray-200 border shadow-lg rounded-lg mt-4">
-                
                 <div className="flex gap-2 mb-4">
                   <button className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md">
                     Delete
