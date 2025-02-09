@@ -125,8 +125,6 @@ export default function SalesOrder() {
               <input
                 type="text"
                 name=""
-                // value={formData.additionalField2}
-                // onChange={handleChange}
                 className="border p-2 rounded w-64"
               />
 
@@ -134,8 +132,6 @@ export default function SalesOrder() {
               <input
                 type="text"
                 name=""
-                // value={formData.date}
-                // onChange={handleChange}
                 className="border p-2 rounded w-64"
               />
 
@@ -143,8 +139,6 @@ export default function SalesOrder() {
               <input
                 type="text"
                 name="client"
-                // value={formData.client}
-                // onChange={handleChange}
                 className="border p-2 rounded w-64"
               />
 
@@ -152,16 +146,12 @@ export default function SalesOrder() {
               <input
                 type="text"
                 name=""
-                // value={formData.designer}
-                // onChange={handleChange}
                 className="border p-2 rounded w-64"
               />
 
               <label className="font-semibold">Net Total:</label>
               <input
                 name=""
-                // value={formData.address}
-                // onChange={handleChange}
                 className="border p-2 rounded w-64"
               />
 

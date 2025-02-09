@@ -68,159 +68,120 @@ const OrderForm = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
-      <div className="max-w-6xl w-full table-auto p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-xl font-bold mb-4 text-center">Order Details</h2>
-        <div className="grid grid-cols-2 gap-20 border-b pb-4">
-          <div className="grid grid-cols-2 gap-2">
-            <label className="font-semibold">Date:</label>
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+      <div className="bg-white w-full shadow-md rounded-lg p-6">
+      <h2 className="text-xl font-semibold mb-4 uppercase">Order Details</h2>
+      <div className="grid grid-cols-3 gap-8">
+      <div className="">
+            <div className="grid grid-cols-2 gap-3">
+              <label className="font-semibold">Date:</label>
+              <input
+                type="date"
+                name="date"
+                className="border p-2 w-full rounded-md"
+              />
 
-            <label className="font-semibold">Client:</label>
-            <input
-              type="text"
-              name="client"
-              value={formData.client}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              <label className="font-semibold">Client:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
 
-            <label className="font-semibold">Designer:</label>
-            <input
-              type="text"
-              name="designer"
-              value={formData.designer}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              <label className="font-semibold">Designer:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
 
-            <label className="font-semibold">Address:</label>
-            <textarea
-              name="address"
-              value={formData.address}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-            <label className="font-semibold">Contact Person:</label>
-            <input
-              type="text"
-              name="contactPerson"
-              value={formData.contactPerson}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              <label className="font-semibold">Address:</label>
+              <textarea
+                type="text"
+                name="client"
+                className="border p-2 rounded w-full"
+              />
 
-            <label className="font-semibold">Receiver's No:</label>
-            <input
-              type="text"
-              name="receiverNo"
-              value={formData.receiverNo}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-
-            <label className="font-semibold">Order No:</label>
-            <input
-              type="text"
-              name="orderNo"
-              value={formData.orderNo}
-              onChange={handleChange}
-              className="border p-2 rounded w-full font-bold"
-            />
+            </div>
           </div>
-          {/* <div className="grid grid-cols-2 gap-6">
-            <label className="font-semibold">Contact Person:</label>
-            <input
-              type="text"
-              name="contactPerson"
-              value={formData.contactPerson}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+          <div className="">
+            
+            <div className="grid grid-cols-2 gap-3">
+              <label className="font-semibold">Contact Person:</label>
+              <input
+                type="text"
+                name="contact person"
+                className="border p-2 w-full rounded-md"
+              />
 
-            <label className="font-semibold">Receiver's No:</label>
-            <input
-              type="text"
-              name="receiverNo"
-              value={formData.receiverNo}
-              onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              <label className="font-semibold">Receiver's Number:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
 
-            <label className="font-semibold">Order No:</label>
-            <input
-              type="text"
-              name="orderNo"
-              value={formData.orderNo}
-              onChange={handleChange}
-              className="border p-2 rounded w-full font-bold"
-            />
-          </div> */}
-          
-          <div className="w-full table-auto p-6 bg-gray-100 shadow-lg rounded-lg">
-        <h2 className="text-xl font-bold mb-4 text-center">Amount</h2>
-          <div className="grid grid-cols-2 gap-2">
-            <label className="font-semibold">SubTotal:</label>
-            <input
-              type="text"
-              name=""
-              // value={formData.additionalField1}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              <label className="font-semibold">Order Number:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
 
-            <label className="font-semibold">Discount %:</label>
-            <input
-              type="text"
-              name=""
-              // value={formData.additionalField2}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-
-            <label className="font-semibold">Discount Total:</label>
-            <input
-              type="text"
-              name=""
-              // value={formData.date}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-
-            <label className="font-semibold">Taxable Total:</label>
-            <input
-              type="text"
-              name="client"
-              // value={formData.client}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-
-            <label className="font-semibold">Tax Total:</label>
-            <input
-              type="text"
-              name=""
-              // value={formData.designer}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
-
-            <label className="font-semibold">Net Total:</label>
-            <input
-              name=""
-              // value={formData.address}
-              // onChange={handleChange}
-              className="border p-2 rounded w-full"
-            />
+              
+            </div>
           </div>
+          <div className="">
+            <h3 className="font-bold mb-6 uppercase border-b">Amount</h3>
+            <div className="grid grid-cols-2 gap-3">
+              <label className="font-semibold">SubTotal:</label>
+              <input
+                type="text"
+                name="subTotal"
+                placeholder="Subtotal"
+                className="border p-2 w-full rounded-md"
+                disabled
+                value={formData.subTotal}
+              />
+
+              <label className="font-semibold">Discount %:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-semibold">Discount Total:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-semibold">Taxable Total:</label>
+              <input
+                type="text"
+                name="client"
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-semibold">Tax Total:</label>
+              <input
+                type="text"
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+              <label className="font-semibold">Net Total:</label>
+              <input
+                name=""
+                className="border p-2 rounded w-full"
+              />
+
+            </div>
           </div>
         </div>
-      </div>
+        </div>
+      
 
       <div className="w-full p-6 bg-white shadow-lg rounded-lg mt-6">
         <table className="w-full border-collapse border border-gray-400 text-xs">
@@ -282,7 +243,8 @@ const OrderForm = () => {
             ))}
           </tbody>
         </table>
-        <div className="mt-4 flex space-x-4">
+        <div className="mt-4 flex justify-between">
+          <div className="flex space-x-4">
           <button
             onClick={addRow}
             className="bg-blue-500 text-white px-4 py-2 rounded"
@@ -295,8 +257,8 @@ const OrderForm = () => {
           >
             Clear All Rows
           </button>
+          </div>
           <button
-            onClick={clearRows}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-800" 
           >
             Submit
