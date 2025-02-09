@@ -179,7 +179,7 @@ export default function SalesOrder() {
         </div>
         <div className="mt-6 w-full table-auto p-6 bg-gray-200 shadow-lg rounded-lg">
           <h3 className="font-semibold mb-4 ml-5">Add Items</h3>
-          <div className="border p-4 rounded-lg bg-gray-100 text-xs">
+          <div className="border p-4 rounded-lg bg-gray-100">
             <div className="flex gap-2 mb-4">
               <input
                 type="text"
@@ -193,7 +193,7 @@ export default function SalesOrder() {
                 Display Order
               </button>
             </div>
-            <table className=" w-full border-collapse border border-gray-300">
+            <table className=" w-full border-collapse border border-gray-300 text-xs">
               <thead>
                 <tr className="bg-gray-100">
                   <th className="border p-2">Item Code</th>

@@ -49,14 +49,14 @@ function Sidebar() {
       <h3 className="text-lg font-bold mb-4">Menu</h3>
       <ul className="space-y-2 font-semibold">
         <li>
-          <Link to="/" className="block px-4 py-2 rounded hover:bg-gray-200">
+          <Link to="/" className="block px-4 py-2 rounded hover:bg-gray-100">
             Dashboard
           </Link>
         </li>
         <li>
           <div
             onClick={() => toggleSubmenu(2)}
-            className="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-200"
+            className="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-100"
           >
             <span>Sales</span>
             <span>{activeSubmenu === 2 ? "▲" : "▼"}</span>
@@ -66,7 +66,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/order-form"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   Order Form
                 </Link>
@@ -74,7 +74,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/sales-order"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   Sales Order
                 </Link>
@@ -82,7 +82,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/delivery"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   Delivery
                 </Link>
@@ -90,7 +90,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/ar-invoice"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   AR Invoice
                 </Link>
@@ -101,7 +101,7 @@ function Sidebar() {
         <li>
           <div
             onClick={() => toggleSubmenu(3)}
-            className="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-200"
+            className="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-gray-100"
           >
             <span>Purchasing</span>
             <span>{activeSubmenu === 3 ? "▲" : "▼"}</span>
@@ -111,7 +111,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/purchase-order"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   Purchase Order
                 </Link>
@@ -119,7 +119,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/goods-receipt-po"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   Goods Receipt PO
                 </Link>
@@ -127,7 +127,7 @@ function Sidebar() {
               <li>
                 <Link
                   to="/ap-invoice"
-                  className="block px-4 py-2 rounded hover:bg-gray-200"
+                  className="block px-4 py-2 rounded hover:bg-gray-100"
                 >
                   AP Invoice
                 </Link>
@@ -138,7 +138,7 @@ function Sidebar() {
         <li>
           <Link
             to="/quick-apps"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             Quick Apps
           </Link>
@@ -146,7 +146,7 @@ function Sidebar() {
         <li>
           <Link
             to="/inventory"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             Inventory
           </Link>
@@ -154,7 +154,7 @@ function Sidebar() {
         <li>
           <Link
             to="/bp-master"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             BP Master
           </Link>
@@ -162,7 +162,7 @@ function Sidebar() {
         <li>
           <Link
             to="/reports"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             Reports
           </Link>
@@ -170,7 +170,7 @@ function Sidebar() {
         <li>
           <Link
             to="/tools"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             Tools
           </Link>
@@ -178,7 +178,7 @@ function Sidebar() {
         <li>
           <Link
             to="/user-management"
-            className="block px-4 py-2 rounded hover:bg-gray-200"
+            className="block px-4 py-2 rounded hover:bg-gray-100"
           >
             User Management
           </Link>

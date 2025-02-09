@@ -68,10 +68,10 @@ const OrderForm = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-200 border-collapse shadow-lg rounded p-6 overflow-auto">
-      <div className="w-full table-auto p-6 bg-white shadow-lg rounded-lg">
+      <div className="max-w-6xl w-full table-auto p-6 bg-white shadow-lg rounded-lg">
         <h2 className="text-xl font-bold mb-4 text-center">Order Details</h2>
-        <div className="grid grid-cols-3 gap-12 border-b pb-4">
-          <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-20 border-b pb-4">
+          <div className="grid grid-cols-2 gap-2">
             <label className="font-semibold">Date:</label>
             <input
               type="date"
@@ -106,8 +106,6 @@ const OrderForm = () => {
               onChange={handleChange}
               className="border p-2 rounded w-full"
             />
-          </div>
-          <div className="grid grid-cols-2 gap-6">
             <label className="font-semibold">Contact Person:</label>
             <input
               type="text"
@@ -135,9 +133,38 @@ const OrderForm = () => {
               className="border p-2 rounded w-full font-bold"
             />
           </div>
-          <div className="w-full table-auto p-6 bg-white shadow-lg rounded-lg">
+          {/* <div className="grid grid-cols-2 gap-6">
+            <label className="font-semibold">Contact Person:</label>
+            <input
+              type="text"
+              name="contactPerson"
+              value={formData.contactPerson}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Receiver's No:</label>
+            <input
+              type="text"
+              name="receiverNo"
+              value={formData.receiverNo}
+              onChange={handleChange}
+              className="border p-2 rounded w-full"
+            />
+
+            <label className="font-semibold">Order No:</label>
+            <input
+              type="text"
+              name="orderNo"
+              value={formData.orderNo}
+              onChange={handleChange}
+              className="border p-2 rounded w-full font-bold"
+            />
+          </div> */}
+          
+          <div className="w-full table-auto p-6 bg-gray-100 shadow-lg rounded-lg">
         <h2 className="text-xl font-bold mb-4 text-center">Amount</h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-2">
             <label className="font-semibold">SubTotal:</label>
             <input
               type="text"
@@ -192,12 +219,11 @@ const OrderForm = () => {
             />
           </div>
           </div>
-          
         </div>
       </div>
 
       <div className="w-full p-6 bg-white shadow-lg rounded-lg mt-6">
-        <table className="w-full border-collapse border border-gray-400">
+        <table className="w-full border-collapse border border-gray-400 text-xs">
           <thead>
             <tr className="bg-gray-200">
               <th className="border border-gray-400 px-2 py-1">
@@ -206,8 +232,8 @@ const OrderForm = () => {
               <th className="border border-gray-400 px-2 py-1">Material</th>
               <th className="border border-gray-400 px-2 py-1">DESCRIPTION</th>
               <th className="border border-gray-400 px-2 py-1">On-hand</th>
-              <th className="border border-gray-400 px-3 py-1">Type</th>
-              <th className="border border-gray-400 px-2 py-1">Qty</th>
+              <th className="border border-gray-400 px-14 py-1">Type</th>
+              <th className="border border-gray-400 px-auto py-1">Qty</th>
               <th className="border border-gray-400 px-2 py-1">Unit Price</th>
               <th className="border border-gray-400 px-2 py-1">Tax</th>
               <th className="border border-gray-400 px-2 py-1">
@@ -268,6 +294,12 @@ const OrderForm = () => {
             className="bg-gray-500 text-white px-4 py-2 rounded"
           >
             Clear All Rows
+          </button>
+          <button
+            onClick={clearRows}
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-800" 
+          >
+            Submit
           </button>
         </div>
       </div>
